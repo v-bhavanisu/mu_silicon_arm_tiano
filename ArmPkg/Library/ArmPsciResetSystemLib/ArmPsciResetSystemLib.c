@@ -51,7 +51,7 @@ ResetCold (
   )
 {
   ARM_MONITOR_ARGS  Args;
-
+  DEBUG ((DEBUG_INFO, "%a: Reset status debug 1\n", __FUNCTION__));
   ZeroMem (&Args, sizeof (ARM_MONITOR_ARGS)); // MU_CHANGE
   // Send a PSCI 0.2 SYSTEM_RESET command
   Args.Arg0 = ARM_SMC_ID_PSCI_SYSTEM_RESET;
