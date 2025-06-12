@@ -32,6 +32,7 @@ ResetCold (
   VOID
   )
 {
+  DEBUG ((DEBUG_INFO, "%a: Reset status debug from ArmSmcPsciResetSystemLib\n", __FUNCTION__));
   // Send a PSCI 0.2 SYSTEM_RESET command
   ArmCallSmc0 (ARM_SMC_ID_PSCI_SYSTEM_RESET, NULL, NULL, NULL);
 }
